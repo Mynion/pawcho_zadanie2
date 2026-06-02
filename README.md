@@ -67,7 +67,7 @@ Wykorzystano Docker Buildx + QEMU.
 ### 3. Cache buildów
 
 Cache przechowywany jest w publicznym repozytorium Docker Hub:
-- docker.io/mynion/cache
+- [docker.io/mynion/cache](https://hub.docker.com/repository/docker/mynion/cache)
 
 Tryb:
 - mode=max
