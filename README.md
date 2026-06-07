@@ -115,6 +115,33 @@ Zastosowano trzy typy tagów:
 
 ---
 
+## Konfiguracja zmiennych i sekretów
+
+Aby umożliwić automatyczne logowanie do Docker Hub podczas działania pipeline, skonfigurowano następujące elementy w repozytorium GitHub:
+
+### Variables
+
+| Nazwa | Opis |
+|---------|---------|
+| DOCKERHUB_USERNAME | Nazwa użytkownika konta Docker Hub |
+
+### Secrets
+
+| Nazwa | Opis |
+|---------|---------|
+| DOCKERHUB_TOKEN | Personal Access Token (PAT) Docker Hub |
+
+Konfiguracja została wykonana w:
+
+Settings → Secrets and variables → Actions
+
+Token Docker Hub wykorzystywany jest przez GitHub Actions do:
+- logowania do Docker Hub,
+- pobierania cache (`cache-from`),
+- zapisywania cache (`cache-to`).
+
+---
+
 ## Uzasadnienie cache
 
 Cache został umieszczony w Docker Hub, ponieważ:
@@ -146,4 +173,7 @@ Wybrano Trivy, ponieważ:
 
 <img width="786" height="135" alt="image" src="https://github.com/user-attachments/assets/bfbfb499-26ed-4e7f-b457-024818d62d2a" />
 <img width="1519" height="624" alt="image" src="https://github.com/user-attachments/assets/b83580d9-ea20-4229-a9d1-580239c1b419" />
+<img width="982" height="168" alt="image" src="https://github.com/user-attachments/assets/55f1ee9a-36ac-4134-b36c-f944f6674f3e" />
+<img width="987" height="162" alt="image" src="https://github.com/user-attachments/assets/6e97133c-01a4-4a3f-96c8-367dae01f6a2" />
+
 
